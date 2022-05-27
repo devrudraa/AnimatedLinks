@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morden NavBar</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+    :root {
+        --pryCol: #d1a30a
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Rubik', sans-serif;
+        color: var(--pryCol);
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #000000;
+        width: 30%;
+        height: 100vh;
+        align-items: center;
+
+    }
+
+    nav a {
+        font-size: large;
+        padding: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        display: grid;
+        place-items: center;
+        margin: 8px;
+        transition: all 0.3s linear;
+    }
+
+    nav a:hover {
+        color: #f3d83f;
+    }
+
+    nav a::before {
+        content: "";
+        position: absolute;
+        height: 0%;
+        width: 100%;
+        background-color: rgba(240, 248, 255, 0.397);
+        box-shadow: 2px 2px 10px 0 #fff;
+        left: 0;
+        transition: all 0.3s linear;
+    }
+
+    nav a:hover::before {
+        height: 40px;
+        /* width: 100%; */
+    }
+
+    /* This code will add a underline with the same animation */
+    /* nav a::after {
+        content: "";
+        height: 2px;
+        background: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 1.5px;
+        left: 0;
+        width: 0%;
+    transition: all 0.3s linear;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }*/
+</style>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">Code</a>
+        <a href="#">Feedback</a>
+
+    </nav>
+</body>
+
+</html>
